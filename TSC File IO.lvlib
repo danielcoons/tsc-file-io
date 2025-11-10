@@ -31,11 +31,20 @@
 		<Item Name="Write Section - String.vi" Type="VI" URL="../Write/Write Section - String.vi"/>
 		<Item Name="Write Section - Timestamp.vi" Type="VI" URL="../Write/Write Section - Timestamp.vi"/>
 	</Item>
-	<Item Name="Read - Single" Type="Folder"/>
-	<Item Name="Write - Single" Type="Folder"/>
-	<Item Name="Single Config" Type="Folder">
-		<Item Name="Open Config File.vi" Type="VI" URL="../Single Config/Open Config File.vi"/>
-		<Item Name="Close Config File.vi" Type="VI" URL="../Single Config/Close Config File.vi"/>
+	<Item Name="Low Level" Type="Folder">
+		<Item Name="Read" Type="Folder">
+			<Item Name="Read Key Value - Timestamp.vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - Timestamp.vi"/>
+			<Item Name="Read Key Value - Array (DBL).vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - Array (DBL).vi"/>
+			<Item Name="Read Key Value - Array (String).vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - Array (String).vi"/>
+			<Item Name="Read Key Value - Boolean.vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - Boolean.vi"/>
+			<Item Name="Read Key Value - Double.vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - Double.vi"/>
+			<Item Name="Read Key Value - I32.vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - I32.vi"/>
+			<Item Name="Read Key Value - Path.vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - Path.vi"/>
+			<Item Name="Read Key Value - String.vi" Type="VI" URL="../Low Level/Read Key Value/Read Key Value - String.vi"/>
+		</Item>
+		<Item Name="Write" Type="Folder"/>
+		<Item Name="Open Config File.vi" Type="VI" URL="../Low Level/Open Config File.vi"/>
+		<Item Name="Close Config File.vi" Type="VI" URL="../Low Level/Close Config File.vi"/>
 	</Item>
 	<Item Name="Configure RunTime Path.vi" Type="VI" URL="../Configure RunTime Path.vi"/>
 </Library>
