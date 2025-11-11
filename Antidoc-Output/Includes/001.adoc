@@ -1,0 +1,971 @@
+== TSC File IO.lvlib
+
+*Responsibility:*
++++This set of VIs helps to access configuration-style VIs and helps to adapt to changes when using the current VI's path primitive for a VI that gets packaged into a ppl. Building a ppl adds its namespace and makes the relative path building get messed up without stripping out that namespace.+++
+
+
+*Version:* 1.0.0.0
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Read Section - Array (DBL)
+|image:TSC_File_IO.lvlib_Read_Section___Array_(DBL).vi.png[TSC File IO.lvlib:Read Section - Array (DBL).vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>array of doubles</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [array of DBL] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - Array (String)
+|image:TSC_File_IO.lvlib_Read_Section___Array_(String).vi.png[TSC File IO.lvlib:Read Section - Array (String).vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>array of strings</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [array of String] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - Boolean
+|image:TSC_File_IO.lvlib_Read_Section___Boolean.vi.png[TSC File IO.lvlib:Read Section - Boolean.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Boolean</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [Boolean] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - Double
+|image:TSC_File_IO.lvlib_Read_Section___Double.vi.png[TSC File IO.lvlib:Read Section - Double.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Double</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [DBL] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - I32
+|image:TSC_File_IO.lvlib_Read_Section___I32.vi.png[TSC File IO.lvlib:Read Section - I32.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>I32 (integer)</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [I32] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - Path
+|image:TSC_File_IO.lvlib_Read_Section___Path.vi.png[TSC File IO.lvlib:Read Section - Path.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Path</b>+++
+
++++<b>Note:</b> The VI will resolve relative paths that will be relative to the input ini file path and the symbolic paths. This gives flexibility to defining key/value pairs for absolute and relative paths.+++
+
++++<appdir> : use the input application directory or the application directory primative (if blank)+++
++++<temp> : the OS temporary directory+++
++++<userdoc> : logged in user's documents folder (Windows)+++
++++<userdesktop> : logged in user's desktop folder (Windows)+++
++++<programdata> : ProgramData folder (Windows)+++
++++<bootdir> : the OS install drive (Windows)+++
++++<programfiles> : the installation directory of applications (Windows)+++
++++..\ : nomenclature of relative path to the ini file directory+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [Path] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - String
+|image:TSC_File_IO.lvlib_Read_Section___String.vi.png[TSC File IO.lvlib:Read Section - String.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>String</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [String] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Section - Timestamp
+|image:TSC_File_IO.lvlib_Read_Section___Timestamp.vi.png[TSC File IO.lvlib:Read Section - Timestamp.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Timestamp</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-value [String] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - Array (DBL)
+|image:TSC_File_IO.lvlib_Write_Section___Array_(DBL).vi.png[TSC File IO.lvlib:Write Section - Array (DBL).vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>array of doubles</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [array of DBL] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - Array (String)
+|image:TSC_File_IO.lvlib_Write_Section___Array_(String).vi.png[TSC File IO.lvlib:Write Section - Array (String).vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>array of strings</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [array of String] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - Boolean
+|image:TSC_File_IO.lvlib_Write_Section___Boolean.vi.png[TSC File IO.lvlib:Write Section - Boolean.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Boolean</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [Boolean] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - Double
+|image:TSC_File_IO.lvlib_Write_Section___Double.vi.png[TSC File IO.lvlib:Write Section - Double.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Double</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [DBL] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - I32
+|image:TSC_File_IO.lvlib_Write_Section___I32.vi.png[TSC File IO.lvlib:Write Section - I32.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>I32 (Integer)</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [I32] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - Path
+|image:TSC_File_IO.lvlib_Write_Section___Path.vi.png[TSC File IO.lvlib:Write Section - Path.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Path</b>+++
+
++++<b>Note:</b> The VI will resolve relative paths that will be relative to the input ini file path and the symbolic paths. This gives flexibility to defining key/value pairs for absolute and relative paths.+++
+
++++<appdir> : use the input application directory or the application directory primative (if blank)+++
++++<temp> : the OS temporary directory+++
++++<userdoc> : logged in user's documents folder (Windows)+++
++++<userdesktop> : logged in user's desktop folder (Windows)+++
++++<programdata> : ProgramData folder (Windows)+++
++++<bootdir> : the OS install drive (Windows)+++
++++<programfiles> : the installation directory of applications (Windows)+++
++++..\ : nomenclature of relative path to the ini file directory+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [Path] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - String
+|image:TSC_File_IO.lvlib_Write_Section___String.vi.png[TSC File IO.lvlib:Write Section - String.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>String</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [String] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Section - Timestamp
+|image:TSC_File_IO.lvlib_Write_Section___Timestamp.vi.png[TSC File IO.lvlib:Write Section - Timestamp.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Timestamp</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [Timestamp] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - Array (DBL)
+|image:TSC_File_IO.lvlib_Read_Key_Value___Array_(DBL).vi.png[TSC File IO.lvlib:Read Key Value - Array (DBL).vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>array of doubles</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [array of DBL] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - Array (String)
+|image:TSC_File_IO.lvlib_Read_Key_Value___Array_(String).vi.png[TSC File IO.lvlib:Read Key Value - Array (String).vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>array of strings</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [array of String] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - Boolean
+|image:TSC_File_IO.lvlib_Read_Key_Value___Boolean.vi.png[TSC File IO.lvlib:Read Key Value - Boolean.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Boolean</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [Boolean] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - Double
+|image:TSC_File_IO.lvlib_Read_Key_Value___Double.vi.png[TSC File IO.lvlib:Read Key Value - Double.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Double</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [DBL] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - I32
+|image:TSC_File_IO.lvlib_Read_Key_Value___I32.vi.png[TSC File IO.lvlib:Read Key Value - I32.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>I32 (integer)</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [I32] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - Path
+|image:TSC_File_IO.lvlib_Read_Key_Value___Path.vi.png[TSC File IO.lvlib:Read Key Value - Path.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Path</b>+++
+
++++<b>Note:</b> The VI will resolve relative paths that will be relative to the input ini file path and the symbolic paths. This gives flexibility to defining key/value pairs for absolute and relative paths.+++
+
++++<appdir> : use the input application directory or the application directory primative (if blank)+++
++++<temp> : the OS temporary directory+++
++++<userdoc> : logged in user's documents folder (Windows)+++
++++<userdesktop> : logged in user's desktop folder (Windows)+++
++++<programdata> : ProgramData folder (Windows)+++
++++<bootdir> : the OS install drive (Windows)+++
++++<programfiles> : the installation directory of applications (Windows)+++
++++..\ : nomenclature of relative path to the ini file directory+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [Path] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - String
+|image:TSC_File_IO.lvlib_Read_Key_Value___String.vi.png[TSC File IO.lvlib:Read Key Value - String.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>String</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [String] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Key Value - Timestamp
+|image:TSC_File_IO.lvlib_Read_Key_Value___Timestamp.vi.png[TSC File IO.lvlib:Read Key Value - Timestamp.vi]
+|+++This VI will read a section/key configuration file and return:+++
++++<b>Timestamp</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum out [ref] - the reference to the open config file+++
++++-value [String] - the output data read+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - Timestamp
+|image:TSC_File_IO.lvlib_Write_Key_Value___Timestamp.vi.png[TSC File IO.lvlib:Write Key Value - Timestamp.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Timestamp</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [Timestamp] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - Array (DBL)
+|image:TSC_File_IO.lvlib_Write_Key_Value___Array_(DBL).vi.png[TSC File IO.lvlib:Write Key Value - Array (DBL).vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>array of doubles</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [array of DBL] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - Array (String)
+|image:TSC_File_IO.lvlib_Write_Key_Value___Array_(String).vi.png[TSC File IO.lvlib:Write Key Value - Array (String).vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>array of strings</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [array of String] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - Boolean
+|image:TSC_File_IO.lvlib_Write_Key_Value___Boolean.vi.png[TSC File IO.lvlib:Write Key Value - Boolean.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Boolean</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [Boolean] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - Double
+|image:TSC_File_IO.lvlib_Write_Key_Value___Double.vi.png[TSC File IO.lvlib:Write Key Value - Double.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Double</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [DBL] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - I32
+|image:TSC_File_IO.lvlib_Write_Key_Value___I32.vi.png[TSC File IO.lvlib:Write Key Value - I32.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>I32 (Integer)</b>+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [I32] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - Path
+|image:TSC_File_IO.lvlib_Write_Key_Value___Path.vi.png[TSC File IO.lvlib:Write Key Value - Path.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>Path</b>+++
+
++++<b>Note:</b> The VI will resolve relative paths that will be relative to the input ini file path and the symbolic paths. This gives flexibility to defining key/value pairs for absolute and relative paths.+++
+
++++<appdir> : use the input application directory or the application directory primative (if blank)+++
++++<temp> : the OS temporary directory+++
++++<userdoc> : logged in user's documents folder (Windows)+++
++++<userdesktop> : logged in user's desktop folder (Windows)+++
++++<programdata> : ProgramData folder (Windows)+++
++++<bootdir> : the OS install drive (Windows)+++
++++<programfiles> : the installation directory of applications (Windows)+++
++++..\ : nomenclature of relative path to the ini file directory+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [Path] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write Key Value - String
+|image:TSC_File_IO.lvlib_Write_Key_Value___String.vi.png[TSC File IO.lvlib:Write Key Value - String.vi]
+|+++This VI will write a section/key configuration file of the type:+++
++++<b>String</b>+++
+
++++Inputs:+++
++++-file refnum in [ref] - the reference to the open config file+++
++++-section [string] - the section string in the configuration file+++
++++-key [string] - the key to be read in the configuration file+++
++++-value [String] - the output data written+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum [ref] - the reference to the open config file+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open Config File
+|image:TSC_File_IO.lvlib_Open_Config_File.vi.png[TSC File IO.lvlib:Open Config File.vi]
+|+++This VI will open the configuration file and strip the ppl namespace if present.+++
+
++++Inputs:+++
++++-Path [path] - a path to the file+++
++++-error in+++
+
++++Outputs:+++
++++-file refnum [ref] - reference to the config file+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Close Config File
+|image:TSC_File_IO.lvlib_Close_Config_File.vi.png[TSC File IO.lvlib:Close Config File.vi]
+|+++This VI will close the configuration file.+++
+
++++Inputs:+++
++++-file refnum [ref] - reference to the config file+++
++++-error in+++
+
++++Outputs:+++
++++-Path [path] - a path to the file+++
++++-error out+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Configure RunTime Path
+|image:TSC_File_IO.lvlib_Configure_RunTime_Path.vi.png[TSC File IO.lvlib:Configure RunTime Path.vi]
+|+++This VI will convert the input file path to remove the lvlibp namespace if it is in the path.+++
+
++++Inputs:+++
++++-Input Path [path] - the starting path+++
+
++++Outputs:+++
++++-Updated Path [path] - the updated path; if the VI is not in a packed library, this will be left alone, however if the VI is in a packed library strip off the extra path info+++
+
++++<b>Code Developed By:</b>+++
++++Daniel Coons+++
++++Technology Service Corporation+++
++++1983 S Liberty Drive+++
++++Bloomington, IN 47403+++
++++www.tsc.com\atcs+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
