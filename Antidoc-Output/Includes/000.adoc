@@ -1,0 +1,4 @@
+== Project description
+
++++This LabVIEW Project provides wrappers around ini config file VIs native to LabVIEW; however, it adds extensions to strip lvlibp namespace automatically AND provides access to other common formats of key/value pairs.+++
+
