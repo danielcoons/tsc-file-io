@@ -30,7 +30,7 @@ We are building a RELATIVE path to the `text.ini` file by using the `Current VI'
 
 **Note**: the qualified name of this function is `PPL Library.lvlib:main.vi`
 
-<img src="./assets/images/main (non-ppl).png" alt = "No PPL">
+<img src="./assets/images/main (non-ppl).PNG" alt = "No PPL">
 
 #### Compiled Version
 
@@ -38,11 +38,11 @@ Notice the code here is fairly similar when compiled; I **can't** edit it, but I
 
 **Note**: now the qualified name of this function is `PPL Library.lvlibp:main.vi`
 
-<img src="./assets/images/main (ppl).png" alt = "PPL">
+<img src="./assets/images/main (ppl).PNG" alt = "PPL">
 
 **But...** my result has an error and I don't get the correct `Greeting`. The error says that the `file doesn't exist` and if you look at the Path to File indicator the lvlibp portion of the qualified name is now in the path.
 
-<img src="./assets/images/ppl error.png" alt = "PPL Error">
+<img src="./assets/images/ppl error.PNG" alt = "PPL Error">
 
 ## How do we fix it?!?!?!
 You can strip out that portion of the path and handle it wherever you are referencing files this way...**OR** use the `TSC File IO` functions.
@@ -51,7 +51,7 @@ Here is the updated code using the `TSC File IO` library.
 
 `Read Section - String.v`i is a function that will open/read/close the file reference and handle PPL qualified name challenges.
 
-<img src="./assets/images/TSC File IO.png" alt = "TSC Library">
+<img src="./assets/images/TSC File IO.PNG" alt = "TSC Library">
 
 ### Development Environment
 <img src="./assets/images/tsc file io - non-ppl.PNG" alt = "TSC Library - PreCompile">
@@ -65,4 +65,4 @@ The versatility here gives the ability to reference files from locations that wi
 
 If you aren't using `ini`-type files for configuration and just need the assitance with the path, use the `Configure RunTime Path.vi` function to clear that PPL namespace out of the path.
 
-<img src="./assets/images/configure-runtime-path.PNG" alt = "Runtime Path">
+<img src="./assets/images/configure-runtime-path.png" alt = "Runtime Path">
